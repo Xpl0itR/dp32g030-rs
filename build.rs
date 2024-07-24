@@ -18,14 +18,14 @@ fn main() {
     let svd = fs::read_to_string(SVD_PATH).unwrap();
 
     let mut config = svd2rust::Config::default();
-    config.target                    = Target::CortexM;
-    config.source_type               = SourceType::Xml;
-    config.skip_crate_attributes     = true;
-    config.strict                    = true;
-    config.max_cluster_size          = true;
-    config.impl_debug                = true;
-    config.impl_debug_feature        = Some("defmt".into());
-    config.ident_formats_theme       = Some(IdentFormatsTheme::Legacy);
+    config.target                = Target::CortexM;
+    config.source_type           = SourceType::Xml;
+    config.skip_crate_attributes = true;
+    config.strict                = true;
+    config.max_cluster_size      = true;
+    config.impl_debug            = true;
+    config.impl_debug_feature    = Some("defmt".into());
+    config.ident_formats_theme   = Some(IdentFormatsTheme::Legacy);
     config.ident_formats.extend([
         ("register_spec".into(),   IdentFormat::default().constant_case().suffix("rs")),
         ("enum_name".into(),       IdentFormat::default().constant_case()),

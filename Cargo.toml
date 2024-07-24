@@ -8,6 +8,7 @@ name = "dp32g030"
 readme = "README.md"
 repository = "https://github.com/Xpl0itR/dp32g030-rs"
 version = "1.0.0"
+exclude = ["/datasheet", "/src/CMSIS-SVD.xsd"]
 
 [build-dependencies]
 form = "0.12.1"
